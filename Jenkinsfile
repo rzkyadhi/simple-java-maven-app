@@ -1,20 +1,10 @@
-pipeline {
-    agent {
-        docker {
-            image 'maven:3.8.6-openjdk-11-slim'
-            args '-p 3001:3001'
-        }
-    }
-    stages {
+node {
+    docker.image('maven:3.8.6-openjdk-11-slim').inside('-p 3001:3001') {
         stage('Build') {
-            steps {
-                sh 'mvn clean install'
-            }
+            sh 'mvn clean install'
         }
         stage('Test') {
-            steps {
-                sh 'mvn test'
-            }
+            sh 'mvn test'
         }
     }
 }
