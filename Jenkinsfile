@@ -5,6 +5,8 @@ node {
         ])
     ])
 
+    checkout scm
+
     docker.image('maven:3.8.6-openjdk-11-slim').inside('-p 3001:3001') {
         stage('Build') {
             sh 'mvn clean install'
