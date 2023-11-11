@@ -12,6 +12,7 @@ public class App {
     public static void main(String[] args) {
         System.out.println(MESSAGE);
         System.out.println("Trying Poll SCM");
+        System.out.println("Second Try");
     }
 
     public String getMessage() {
