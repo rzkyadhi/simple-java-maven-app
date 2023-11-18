@@ -22,7 +22,7 @@ public class App {
         this.randomNumber1 = randomNumber1;
     }
 
-    public void setRandomNumber1(int randomNumber2) {
+    public void setRandomNumber2(int randomNumber2) {
         this.randomNumber2 = randomNumber2;
     }
 
