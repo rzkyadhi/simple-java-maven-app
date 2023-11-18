@@ -14,5 +14,12 @@ node {
         stage('Test') {
             sh 'mvn test'
         }
+        stage('Manual Approval') {
+            input message: 'Lanjutkan ke tahap Deploy? (Klik "Proceed" untuk melanjutkan)' 
+        }
+        stage('Deploy') {
+            sh './jenkins/scripts/deliver.sh'
+            sleep 60 
+        }
     }
 }
