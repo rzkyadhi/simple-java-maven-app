@@ -1,21 +1,43 @@
 package com.mycompany.app;
+import java.util.Random;
 
-/**
- * Hello world!
- */
 public class App {
 
-    private static final String MESSAGE = "Hello World!";
+    private int randomNumber1;
+    private int randomNumber2;
 
-    public App() {}
-
-    public static void main(String[] args) {
-        System.out.println(MESSAGE);
-        System.out.println("Trying Poll SCM");
-        System.out.println("Second Try");
+    public App() {
+        
     }
 
-    public String getMessage() {
-        return MESSAGE;
+    public int getRandomNumber1() {
+        return randomNumber1;
+    }
+
+    public int getRandomNumber2() {
+        return randomNumber2;
+    }
+
+    public void setRandomNumber1(int randomNumber1) {
+        this.randomNumber1 = randomNumber1;
+    }
+
+    public void setRandomNumber1(int randomNumber2) {
+        this.randomNumber2 = randomNumber2;
+    }
+
+    public int addRandomNumbers() {
+        return randomNumber1 + randomNumber2;
+    }
+
+    public static void main(String[] args) {
+        App app = new App();
+        Random random = new Random();
+
+        app.setRandomNumber1 = random.nextInt(10) + 1;
+        app.setRandomNumber2 = random.nextInt(10) + 1;
+
+        int sum = app.addRandomNumbers();
+        System.out.println("Sum of random numbers: " + sum);
     }
 }
