@@ -34,8 +34,8 @@ public class App {
         App app = new App();
         Random random = new Random();
 
-        app.setRandomNumber1 = random.nextInt(10) + 1;
-        app.setRandomNumber2 = random.nextInt(10) + 1;
+        app.setRandomNumber1(random.nextInt(10) + 1);
+        app.setRandomNumber2(random.nextInt(10) + 1);
 
         int sum = app.addRandomNumbers();
         System.out.println("Sum of random numbers: " + sum);
